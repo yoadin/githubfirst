@@ -1,0 +1,83 @@
+/* Reset and box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Full-page background image */
+html, body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-image: url('High-Thesis-common-space.jpg'); /* Make sure the image is in the same directory */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Optional dark overlay to improve text readability */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Adjust darkness here */
+    z-index: -1;
+}
+
+/* Layout styling */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header & Footer */
+header, footer {
+    background-color: rgba(51, 51, 51, 0.8); /* slightly transparent background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Main content area */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Buttons container */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for contrast */
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #5ab8d2;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: cadetblue;
+    padding: 15px;
+}
